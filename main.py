@@ -1,7 +1,37 @@
+import tkinter as tk
 
+# # Create the main window
+# class ExpenseTracker:
+#     def __init__(self):
+#         self.window = tk.Tk()
+#         self.window.title("Expense Tracker")
+#         self.window.geometry("1000x600")
+#         self.expenses = []
+#         self.setup_gui()
+    
+#     def setup_gui(self):
+#         # Create GUI elements here
+#         pass
+    
+#     def add_expense(self):
+#         # Implementation here
+#         pass
+    
+#     def view_expenses(self):
+#         # Implementation here
+#         pass
+    
+#     def run(self):
+#         self.window.focus_force()
+#         self.window.lift()
+#         self.window.mainloop()
 
-
+# main function ...
 def main():
+    app = ExpenseTracker()
+    app.run()
+    
+    # Main menu loop ...
     while True:
         print("1. Add expense")
         print("2. View expenses")
@@ -9,16 +39,45 @@ def main():
         print("4. Monthly summary")
         print("5. Exit")
 
+        choice = input("Your choice: ")
+
+        if choice == '1':
+            add_expense()
+
+        elif choice == '2':
+            view_expenses()
+
+        elif choice == '3':
+            delete_expense()
+
+        elif choice == '4':
+            monthly_summary()
+
+        elif choice == '5':
+            print("Exiting the program.")
+            break
+
         break
 
 
 
 
-
-
-
-
-
+# functions ...
+def add_expense():
+    # Logic to add an expense
+    pass
+def view_expenses():
+    # Logic to view expenses
+    pass        
+def delete_expense():
+    # Logic to delete an expense
+    pass
+def monthly_summary():
+    # Logic to show monthly summary
+    pass
+def exit():
+    # Logic to show monthly summary
+    pass
 
 if __name__ == "__main__":
     main()

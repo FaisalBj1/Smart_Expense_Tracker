@@ -62,6 +62,7 @@ def main():
             print("Exiting the program.")
             break
 
+        print("Ending program.")
         break
 
 
@@ -71,11 +72,13 @@ def main():
 def add_expense():
     title = input("Enter expense title: ")
     amount = float(input("Enter expense amount: "))
+    category = input("Enter expense category: ")
     date = datetime.now().strftime("%Y-%m-%d")
     expenses.append({
         'Expence title': title,
         'Amount': amount,
-        'Date': datetime.now().strftime("%Y-%m-%d")
+        'Category': category,
+        'Date': datetime.now().strftime("%d-%m-%Y")
     })
     print("Expense added successfully!")
     print("Current expenses:", expenses)

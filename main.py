@@ -1,4 +1,5 @@
 import tkinter as tk
+from datetime import datetime
 
 # # Create the main window
 # class ExpenseTracker:
@@ -28,8 +29,12 @@ import tkinter as tk
 
 # main function ...
 def main():
-    app = ExpenseTracker()
-    app.run()
+    # app = ExpenseTracker()
+    # app.run()
+
+    global expenses 
+    expenses = []
+
     
     # Main menu loop ...
     while True:
@@ -64,8 +69,18 @@ def main():
 
 # functions ...
 def add_expense():
-    # Logic to add an expense
+    title = input("Enter expense title: ")
+    amount = float(input("Enter expense amount: "))
+    date = datetime.now().strftime("%Y-%m-%d")
+    expenses.append({
+        'Expence title': title,
+        'Amount': amount,
+        'Date': datetime.now().strftime("%Y-%m-%d")
+    })
+    print("Expense added successfully!")
+    print("Current expenses:", expenses)
     pass
+
 def view_expenses():
     # Logic to view expenses
     pass        

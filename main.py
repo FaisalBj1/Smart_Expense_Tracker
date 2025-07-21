@@ -1,5 +1,6 @@
 import tkinter as tk
 from datetime import datetime
+import json
 
 # # Create the main window
 # class ExpenseTracker:
@@ -59,11 +60,12 @@ def main():
             monthly_summary()
 
         elif choice == '5':
-            print("Exiting the program.")
+            print("Exiting the pro5gram.")
+            print("---------------------")
             break
 
-        print("Ending program.")
-        break
+        print("---------------------")
+        pass
 
 
 

@@ -66,7 +66,7 @@ def main():
         else:
             print("Invalid choice! Please enter 1-5.")
         print("---------------------")
-        
+
         break
 
 
@@ -97,22 +97,20 @@ def add_expense():
 
     with open("expenses.json", "w") as f:
         json.dump(expenses, f, indent=4)
-        
-        
+           
     print("Expense added successfully!")
     pass
 
 def view_expenses():
-    # try:
-    #     with open("expenses.json", "r") as expenses_file:
-    #         expenses = json.load(expenses_file)
-    #         if not expenses:
-    #             print("No expenses found.")
-    #         else:
-    #             for expense in expenses:
-    #                 print(f"Title: {expense['Expense title']}, Amount: {expense['Amount']}, Category: {expense['Category']}, Date: {expense['Date']}")
-    # except FileNotFoundError:
-    #     print("No expenses file found. Please add an expense first.")
+    print("\n- View Expenses -")
+    # Read expenses from the JSON file if exist ...
+    try:
+        with open("expenses.json", "r") as expenses_file:
+            expenses = json.load(expenses_file)
+            for expense in expenses:
+                print(f"Title: {expense['Expense title']}, Amount: {expense['Amount']}, Category: {expense['Category']}, Date: {expense['Date']}")
+    except FileNotFoundError:
+        print("No expenses file found. Please add an expense first.")
     pass   
 
 def delete_expense():

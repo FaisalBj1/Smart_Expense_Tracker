@@ -60,7 +60,7 @@ def main():
             monthly_summary()
 
         elif choice == '5':
-            print("Exiting the pro5gram.")
+            print("Exiting the program.")
             print("---------------------")
             break
 
@@ -82,7 +82,13 @@ def add_expense():
         'Category': category,
         'Date': datetime.now().strftime("%d-%m-%Y")
     })
-    print("Expense added successfully!")
+    print("Expense added to list successfully!")
+
+    # adding new expense to json file and creating it if not exist...
+    with open("notes.txt", "w") as expenses_file:
+        json.dump(expenses, expenses_file, indent=4)
+        print("Expense added to json successfully!")
+        
     print("Current expenses:", expenses)
     pass
 

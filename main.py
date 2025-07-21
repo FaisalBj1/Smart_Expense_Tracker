@@ -85,7 +85,7 @@ def add_expense():
     print("Expense added to list successfully!")
 
     # adding new expense to json file and creating it if not exist...
-    with open("notes.txt", "w") as expenses_file:
+    with open("expenses.json", "w") as expenses_file:
         json.dump(expenses, expenses_file, indent=4)
         print("Expense added to json successfully!")
         

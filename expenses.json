@@ -1,8 +1,14 @@
 [
     {
-        "Expence title": "ddd",
-        "Amount": 222.0,
-        "Category": "eee",
+        "Expense title": "test",
+        "Amount": 33.0,
+        "Category": "test",
+        "Date": "21-07-2025"
+    },
+    {
+        "Expense title": "food",
+        "Amount": 32.0,
+        "Category": "doof",
         "Date": "21-07-2025"
     }
 ]
